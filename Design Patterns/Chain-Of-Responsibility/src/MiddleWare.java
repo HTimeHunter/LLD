@@ -1,3 +1,13 @@
+/**
+ * creating abstract class, to avoid the duplicate code in each handler
+ * such as link and checkNext methods are common.
+ * so, adding boilerplate code in the abstract class.
+ */
+
+/**
+ * open-closed principle: we can introduce new handlers into the app without
+ * breaking the existing client code.
+ */
 public abstract class MiddleWare {
     private MiddleWare next;
 

@@ -20,8 +20,8 @@ import java.io.InputStreamReader;
 
 /**
  * credits:
- * https://youtube.com/playlist?list=PL6W8uoQQ2c61X_9e6Net0WdYZidm7zooW&feature=shared
- * https://refactoring.guru
+ * <a href="https://youtube.com/playlist?list=PL6W8uoQQ2c61X_9e6Net0WdYZidm7zooW&feature=shared">...</a>
+ * <a href="https://refactoring.guru">...</a>
  */
 
 public class Main {
