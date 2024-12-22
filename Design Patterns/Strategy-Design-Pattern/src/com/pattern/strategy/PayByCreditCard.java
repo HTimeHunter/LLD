@@ -1,4 +1,6 @@
-package com.pattern;
+package com.pattern.strategy;
+
+import com.pattern.CreditCard;
 
 import java.io.BufferedReader;
 import java.io.IOException;

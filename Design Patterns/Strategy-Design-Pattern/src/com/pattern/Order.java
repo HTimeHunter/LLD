@@ -1,5 +1,7 @@
 package com.pattern;
 
+import com.pattern.strategy.PayStrategy;
+
 /**
  * com.pattern.Order class:
  * It doesn't know the concrete payment strategy that user has picked.
