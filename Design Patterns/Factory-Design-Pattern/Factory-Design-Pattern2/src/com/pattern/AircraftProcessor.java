@@ -1,3 +1,7 @@
+package com.pattern;
+
+import com.pattern.factory.AircraftFactory;
+
 public class AircraftProcessor {
     private AircraftFactory aircraftFactory=null;
     public AircraftProcessor(AircraftFactory aircraftFactory){

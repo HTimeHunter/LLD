@@ -1,3 +1,7 @@
+package com.pattern.factory;
+
+import com.pattern.Aircraft;
+
 public class BritishAircraftFactory extends AircraftFactory {
     @Override
     public Aircraft createAircraft(String type) {
