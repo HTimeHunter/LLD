@@ -1,3 +1,5 @@
+package com.pattern.singleton1;
+
 public class EagerInitializedSingleton {
     private static final EagerInitializedSingleton instance=new EagerInitializedSingleton();
     private EagerInitializedSingleton(){}

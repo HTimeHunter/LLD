@@ -1,3 +1,5 @@
+package com.pattern;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,7 +41,7 @@ public class Main {
                     System.out.println(i+": but they are not identical");
                 }
             } else {
-                System.out.println(i+" Shape objects are the same.");
+                System.out.println(i+" com.pattern.Shape objects are the same.");
             }
         }
     }

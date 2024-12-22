@@ -1,3 +1,5 @@
+package com.pattern;
+
 import java.util.Objects;
 
 public abstract class Shape {

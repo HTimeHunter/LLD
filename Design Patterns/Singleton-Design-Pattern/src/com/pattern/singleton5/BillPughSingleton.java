@@ -1,3 +1,5 @@
+package com.pattern.singleton5;
+
 /**
  * private inner static class that contains the instance of singletone class.
  * when singleton class is loaded, SingletonHelper class is not loaded into memory

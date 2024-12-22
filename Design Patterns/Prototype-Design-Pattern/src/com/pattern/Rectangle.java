@@ -1,3 +1,5 @@
+package com.pattern;
+
 public class Rectangle extends Shape{
     public int width;
     public int height;
