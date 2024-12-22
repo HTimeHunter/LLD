@@ -1,4 +1,4 @@
-package com.pattern;
+package com.pattern.strategy;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -10,7 +10,7 @@ import java.util.Map;
  * concurrency cases are not considered in the implementation.
  * ideal assumption: only one user is making a call.
  */
-public class PayByPayPal implements PayStrategy{
+public class PayByPayPal implements PayStrategy {
     private static final Map<String,String> DATA_BASE = new HashMap<>();
     private final BufferedReader READER = new BufferedReader(new InputStreamReader(System.in));
     private String email;

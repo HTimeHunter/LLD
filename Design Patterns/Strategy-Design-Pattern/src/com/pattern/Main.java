@@ -1,5 +1,9 @@
 package com.pattern;
 
+import com.pattern.strategy.PayByCreditCard;
+import com.pattern.strategy.PayByPayPal;
+import com.pattern.strategy.PayStrategy;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
