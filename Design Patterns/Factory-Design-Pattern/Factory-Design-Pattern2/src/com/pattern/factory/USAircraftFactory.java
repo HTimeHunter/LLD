@@ -1,4 +1,8 @@
-public class USAircraftFactory extends AircraftFactory{
+package com.pattern.factory;
+
+import com.pattern.Aircraft;
+
+public class USAircraftFactory extends AircraftFactory {
     @Override
     public Aircraft createAircraft(String type) {
         if (type.equals("Bomber")){
