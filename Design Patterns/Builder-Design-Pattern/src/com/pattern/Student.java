@@ -1,3 +1,5 @@
+package com.pattern;
+
 public class Student {
     private int age;
     private String name;
