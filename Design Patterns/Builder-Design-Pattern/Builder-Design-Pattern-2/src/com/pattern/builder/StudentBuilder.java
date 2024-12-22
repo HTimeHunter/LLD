@@ -1,9 +1,13 @@
+package com.pattern.builder;
+
+import com.pattern.Student;
+
 import java.util.List;
 
 public abstract class StudentBuilder {
-    protected String name;
-    protected int age;
-    protected List<String> subjects;
+    public String name;
+    public int age;
+    public List<String> subjects;
 
     public StudentBuilder setName(String name){
         this.name=name;

@@ -1,3 +1,9 @@
+package com.pattern;
+
+import com.pattern.builder.EngineeringStudentBuilder;
+import com.pattern.builder.MBAStudentBuilder;
+import com.pattern.builder.StudentBuilder;
+
 public class Director {
     StudentBuilder studentBuilder;
 

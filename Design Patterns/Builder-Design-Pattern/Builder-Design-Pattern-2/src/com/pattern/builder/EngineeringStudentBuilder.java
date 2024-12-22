@@ -1,7 +1,9 @@
+package com.pattern.builder;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class EngineeringStudentBuilder extends StudentBuilder{
+public class EngineeringStudentBuilder extends StudentBuilder {
     @Override
     public StudentBuilder setSubjects() {
         List<String> subjects=new ArrayList<>();
