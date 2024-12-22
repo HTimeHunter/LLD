@@ -1,3 +1,10 @@
+package com.pattern;
+
+import com.pattern.chain.MiddleWare;
+import com.pattern.chain.RoleCheckMiddleWare;
+import com.pattern.chain.ThrottlingMiddleWare;
+import com.pattern.chain.UserExistsMiddleWare;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

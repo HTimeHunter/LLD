@@ -1,4 +1,8 @@
-public class UserExistsMiddleWare extends MiddleWare{
+package com.pattern.chain;
+
+import com.pattern.Server;
+
+public class UserExistsMiddleWare extends MiddleWare {
     private Server server;
 
     public UserExistsMiddleWare(Server server){
