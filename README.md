@@ -135,3 +135,109 @@ Difference between Facade and Proxy:
     - whenever product is available in the store, all the interested customers should be notified.
 - whenever, an important event happens to the publisher, it goes over its subscribers and calls the specific notification method on their objects.
 - event subscription
+
+## 10. Factory Design Pattern
+- is a creational pattern
+- provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created.
+- let's we want to create an object based on some condition, and this object is being created at 1000s of places in the codebase so everywhere we will have to write a condition which leads to a lot of duplicate code. here factory comes into the picture.
+- when to use:
+  - when we don't know beforehand the exact types and dependencies of the objects our code should work with.
+  - factory method decouples the construction code from the code that actually uses the product. Therefore it's easier to extend the product construction code independently from the rest of the code.
+  - use the factory method when you want to save system resources by reusing existing objects instead of creating a new one each time.
+
+## 11. Abstract Factory Design Pattern
+- creational pattern
+- lets you produce families of related objects without specifying their concrete class.
+- "families of objects" example:
+  - `Transport` + `Engine` + `Controls`
+    - `Car` + `CombustionEngine` + `SteeringWheel`
+    - `Plane`  + `JetEngine` + `Yoke`
+- **Simple Factory** : it has once creation method with a large conditional that based on method parameters chooses which product class to instantiate and then return. Over time, this method might become too big, so we decide to extract parts of the method to subclasses. once we do it several times, it turns into the classic factory method pattern.
+
+## 12. Bridge Design Pattern
+- structural pattern
+- lets you split a large class or set of closely related classes into 2 separate hierarchies - abstraction and implementation. which can be developed independently of each other.
+
+- Problem:
+  - ![](Images/m41l111k.bmp)
+  - adding new shape types and colors will grow this hierarchy exponentially.
+- Solution:
+  - this problem occurs bcz we're trying to extend shape classes in 2 independent dimensions: by form and by color.
+  - bridge pattern solves this problem by switching from inheritance to object composition.
+  - ![](Images/yfoqam9m.bmp)
+- Abstraction and Implementation:
+  - GoF introduces the terms *Abstraction* and *Implementation* as part of bridge definition.
+  - abstraction (also called *interface*) is a high-level control layer for some entity. this layer delegates the work to implementation layer (also called *platform*).
+  - eg. real-application, the abstraction can be represented by a GUI, and implementation could be underlying OS code(API) which the GUI layer calls in response to user interactions.
+  - we can extend such an app in 2 independent directions:
+    - have several different GUIs (tailored for regular customers and admin)
+    - support several different APIs (to be able to launch the app under windows, Linux, macOS).
+  - making even a simple change to monolithic codebase is pretty hard.
+  - we can bring order to this chaos by extracting the code related to specific interface-platform combinations into separate classes.
+  - however, soon there will be lots of these classes bcz adding a new GUI or supporting a different API would require creating more and more classes.
+  - bridge pattern suggests that we divide the classes into 2 hierarchies:
+    - abstraction: GUI layer of the app.
+    - Implementation: operating systems' APIs.
+    - ![](Images/45avp6oy.bmp)
+  - abstraction object controls the appearance of the app, delegating the actual work to linked implementation object.
+
+- when to use:
+  - when you need to extend a class in several orthogonal (independent) dimensions.
+  - when you want to divide and organize a monolithic class that has several variants of some functionality (eg. if the class can work with various DB servers.)
+
+```
+Difference between strategy and Bridge Design patterns:
+- bridge pattern is structural pattern (It is more about how do we build a software component.)
+- strategy pattern is behavioral pattern (It is more about how do we want to run a behavior in software.)
+
+- bridge: we can split the hierarchy of interface and class, join it with an abstract reference.
+- strategy: we have more ways for doing an operation; with strategy, we can choose the algo. at run-time and can modify a single strategy without a lot of side-effects at compile-time.
+```
+
+## 12. Prototype Design Pattern
+- creation pattern
+- lets you copy existing objects without making your code dependent on their classes.
+- Problem:
+  - let's say we have an object, and want to create a copy of it.
+  - one way is to create a new object of the same class then copy all the fields of existing object into new object.
+  - but there's a catch. not all objects can be copied that way bcz some of the object's fields may be private and not visible outside of the object itself.
+  - another catch is when we just know the object's interface, not actual concrete class. we won't be able to copy without the information of concrete class.
+- prototype pattern delegates the cloning process to actual objects that are being cloned.
+- ![](Images/kat5daa2.bmp)
+
+## 13. Singleton Design Pattern
+- creational pattern
+- lets you ensure that a class has only one instance while providing a global access point to this instance.
+- when to use:
+  - when a class in your program should have just a single instance available to all clients (eg. database object shared by different parts of the program).
+- Facade class can often be transformed into a singleton since a single facade object is sufficient in most cases.
+## 14. Mediator Design Pattern
+- behavioral pattern
+- lets you reduce chaotic dependencies between objects.
+- the pattern restricts communications between the objects and forces them to collaborate only via a mediator object.
+- ![](Images/jiigjd6i.bmp)
+- when to use:
+  - when it's hard to change some of the classes bcz they are tightly coupled to a bunch of other classes.
+  - use the mediator when we are creating tons of component subclasses just to reuse some basic behavior in various contexts.
+- examples:
+  - java.util.concurrent.ExecutorService
+  - java.util.concurrent.ScheduledExecutorService
+```
+Chain Of Responsibility:
+- it passes a request sequentially along a dynamic chain of potential receivers until one of them handles it.
+
+Mediator:
+- eliminates connections between senders and receivers, forcing them to communicate indirectly via a mediator object.
+
+Observer:
+- lets receivers dynamically subscribe to and unsubscribe from receiving requests.
+
+Facade:
+- defines a simplified interface to a subsystem of objects, but it doesn't intoduce a new functionality. objects within the subsystem can communicate directly.
+
+Mediator: 
+- centralizes communication between components of the system. 
+- components only know about the mediator object and don't communicate directly.
+
+=> instead these components become dependent on a single mediator object. the goal of Observer is to establish dynamic one-way connections between objects, where some objects act as subordinates of others.
+```
