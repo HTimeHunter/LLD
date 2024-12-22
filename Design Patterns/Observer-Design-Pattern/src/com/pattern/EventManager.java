@@ -1,6 +1,6 @@
-package com.observer;
+package com.pattern;
 
-import com.observer.observer.EventListener;
+import com.pattern.observer.EventListener;
 
 import java.io.File;
 import java.util.ArrayList;

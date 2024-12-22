@@ -1,4 +1,4 @@
-package com.observer.observer;
+package com.pattern.observer;
 
 import java.io.File;
 
