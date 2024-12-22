@@ -1,6 +1,6 @@
-package com.decorator.Decorator;
+package com.pattern.Decorator;
 
-import com.decorator.DataSource;
+import com.pattern.DataSource;
 
 import java.util.Base64;
 
