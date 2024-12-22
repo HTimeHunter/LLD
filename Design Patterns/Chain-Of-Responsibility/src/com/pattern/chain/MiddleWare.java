@@ -1,4 +1,4 @@
-/**
+package com.pattern.chain; /**
  * creating abstract class, to avoid the duplicate code in each handler
  * such as link and checkNext methods are common.
  * so, adding boilerplate code in the abstract class.

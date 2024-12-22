@@ -1,4 +1,6 @@
-public class ThrottlingMiddleWare extends MiddleWare{
+package com.pattern.chain;
+
+public class ThrottlingMiddleWare extends MiddleWare {
     private final int requestPerMinute;
     private int request;
     private long currentTime;

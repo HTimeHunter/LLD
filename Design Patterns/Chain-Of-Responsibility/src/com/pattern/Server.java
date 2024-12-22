@@ -1,3 +1,7 @@
+package com.pattern;
+
+import com.pattern.chain.MiddleWare;
+
 import java.util.HashMap;
 import java.util.Map;
 
