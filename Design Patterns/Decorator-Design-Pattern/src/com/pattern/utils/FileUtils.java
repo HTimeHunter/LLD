@@ -1,4 +1,4 @@
-package com.decorator.utils;
+package com.pattern.utils;
 
 import java.io.*;
 

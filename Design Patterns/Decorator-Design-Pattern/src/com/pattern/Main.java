@@ -1,8 +1,8 @@
-package com.decorator;
+package com.pattern;
 
-import com.decorator.Decorator.CompressionDecorator;
-import com.decorator.Decorator.DataSourceDecorator;
-import com.decorator.Decorator.EncryptionDecorator;
+import com.pattern.Decorator.CompressionDecorator;
+import com.pattern.Decorator.DataSourceDecorator;
+import com.pattern.Decorator.EncryptionDecorator;
 
 
 public class Main {

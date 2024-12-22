@@ -1,7 +1,6 @@
-package com.decorator.Decorator;
+package com.pattern.Decorator;
 
-import com.decorator.DataSource;
-import com.decorator.utils.FileUtils;
+import com.pattern.DataSource;
 
 import java.io.*;
 import java.util.Base64;

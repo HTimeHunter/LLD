@@ -1,6 +1,4 @@
-package com.decorator;
-
-import com.decorator.utils.FileUtils;
+package com.pattern;
 
 import java.io.*;
 
