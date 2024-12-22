@@ -1,6 +1,6 @@
-package com.observer.observable;
+package com.pattern.observable;
 
-import com.observer.EventManager;
+import com.pattern.EventManager;
 
 import java.io.File;
 

@@ -1,8 +1,8 @@
-package com.observer;
+package com.pattern;
 
-import com.observer.observable.Editor;
-import com.observer.observer.EmailNotificationListener;
-import com.observer.observer.LogOpenListener;
+import com.pattern.observable.Editor;
+import com.pattern.observer.EmailNotificationListener;
+import com.pattern.observer.LogOpenListener;
 
 /**
  * In this code,
