@@ -1,3 +1,5 @@
+package com.pattern.singleton2;
+
 public class LazyInitializedSingleton {
     private static LazyInitializedSingleton instance;
 

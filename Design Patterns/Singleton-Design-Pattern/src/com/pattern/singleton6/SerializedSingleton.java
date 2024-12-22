@@ -1,3 +1,5 @@
+package com.pattern.singleton6;
+
 import java.io.Serial;
 import java.io.Serializable;
 

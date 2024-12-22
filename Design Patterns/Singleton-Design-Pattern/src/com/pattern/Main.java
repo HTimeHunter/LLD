@@ -1,3 +1,12 @@
+package com.pattern;
+
+import com.pattern.singleton1.EagerInitializedSingleton;
+import com.pattern.singleton2.LazyInitializedSingleton;
+import com.pattern.singleton3.ThreadSafeSingleton;
+import com.pattern.singleton4.DoubleLockingSingleton;
+import com.pattern.singleton5.BillPughSingleton;
+import com.pattern.singleton6.SerializedSingleton;
+
 import java.io.*;
 
 public class Main {

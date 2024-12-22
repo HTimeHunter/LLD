@@ -1,3 +1,5 @@
+package com.pattern.singleton3;
+
 public class ThreadSafeSingleton {
     private static ThreadSafeSingleton instance;
     private ThreadSafeSingleton(){}
